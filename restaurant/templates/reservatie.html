@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>De Blauwe Worm</title>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    </head>
+    <body>
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- CTA -->
+            <section id="cta" class="main special">
+                <h1>Reserveer een tafel</h1>
+                <form action="/reservatie" method="post">
+                    <label for="name">Naam:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="date">Datum:</label>
+                    <input type="date" id="date" name="date" required><br><br>
+                    <label for="time">Tijd:</label>
+                    <input type="time" id="time" name="time" required><br><br>
+                    <label for="people">Aantal personen:</label>
+                    <input type="number" id="people" name="people" required><br><br>
+                    <input type="submit" value="Reserveer">
+                </form>
+                <ul class="actions">
+                    <li><a href="index.html" class="button big">Home</a></li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </footer>
+        </div>
+        <!-- Scripts -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/skel.min.js' %}"></script>
+        <script src="{% static 'assets/js/util.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+    </body>
+</html>

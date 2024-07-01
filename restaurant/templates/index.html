@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>De Blauwe Worm</title>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/review.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="inner">
+            <img src="{% static 'images/Worm.png' %}" height="200" width="200" alt="Worm">
+            <h1>De Blauwe Worm</h1>
+            <p>Verleg je smaakgrenzen en ontdek nieuwe delicatessen</p>
+        </div>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Banner -->
+        <section id="intro" class="main">
+            <span class="icon fa-diamond major"></span>
+            <h2>Geschiedenis</h2>
+            <p>Het restaurant: "De Blauwe Worm" werd gesticht door de masterchef in nieuwe en walgelijke specialiteiten: Juan Maïs; in 2020. En werd gebouwd ondergronds op een geheime locatie door in het zwart betaalde werknemers die in slechte arbeidsomstandigheden ook stierven net voordat ze het gebouw konden afwerken, daarom is het dan ook 40 graden in ons bunkerrestaurant. Het betreden op dit restaurant is op eigen risico, uit respect voor de bouwvakkers die stierven bij de bouw.</p>
+            <ul class="actions">
+                <li><a href="about.html" class="button big">Learn More</a></li>
+            </ul>
+        </section> 
+
+        <!-- Items -->
+        <section class="main items">
+            <article class="item">
+                <header>
+                    <a href="menu.html"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
+                    <h3>Menu</h3>
+                </header>
+                <p>Een menu is een menu maak je keuze en bestel nu!</p>
+                <ul class="actions">
+                    <li><a href="menu.html" class="button">More</a></li>
+                </ul>
+            </article>
+            <article class="item">
+                <header>
+                    <a href="openingsuren.html"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>
+                    <h3>Openingsuren</h3>
+                </header>
+                <p>Uren zijn uren bezoek ons niet want we leggen je in de luren.</p>
+                <ul class="actions">
+                    <li><a href="openingsuren.html" class="button">More</a></li>
+                </ul>
+            </article>
+            <article class="item">
+                <header>
+                    <a href="locatie.html"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a>
+                    <h3>Locatie</h3>
+                </header>
+                <p>Plaatsen zijn plaatsen bij ons wordt er bediend op rolschaatsen.</p>
+                <ul class="actions">
+                    <li><a href="locatie.html" class="button">More</a></li>
+                </ul>
+            </article>
+            <article class="item">
+                <header>
+                    <a href="ecologie.html"><img src="{% static 'images/jungle.jpeg' %}" alt="" /></a>
+                    <h3>Ecologische ingredienten</h3>
+                </header>
+                <p>Ingrediënten zijn ingrediënten, wij vergiftigen onze cliënten</p>
+                <ul class="actions">
+                    <li><a href="ecologie.html" class="button">More</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" class="main special">
+            <h2>Contacteer ons:</h2>
+            <p>Telefoonnummer: 01010101 01000100 01110101 01101101 01100010 00111111</p>
+            <p>E-mail: StultusES@gmail.com</p>
+            <p>Fax: +6 696 717 6666</p>
+            <ul class="actions">
+                <li><a href="reservatie.html" class="button big">Reserveer</a></li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                
+            </ul>
+        </footer>
+    </div>
+
+    <div class="copyright">
+        <a href="https://de-blauwe-worm.chickencoding.repl.co"><p>Made by Chickencoding in 2020</p></a>
+        <p>Remixed by Fungichi in 2023</p>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/skel.min.js' %}"></script>
+    <script src="{% static 'assets/js/util.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>
