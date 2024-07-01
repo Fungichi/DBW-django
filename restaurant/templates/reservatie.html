@@ -10,27 +10,44 @@
     <body>
         <!-- Wrapper -->
         <div id="wrapper">
+            <h2 class="align-center">Reservatie</h2>
             <!-- CTA -->
-            <section id="cta" class="main special">
-                <h1>Reserveer een tafel</h1>
-                <form action="/reservatie" method="post">
-                    <label for="name">Naam:</label>
-                    <input type="text" id="name" name="name" required><br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="date">Datum:</label>
-                    <input type="date" id="date" name="date" required><br><br>
-                    <label for="time">Tijd:</label>
-                    <input type="time" id="time" name="time" required><br><br>
-                    <label for="people">Aantal personen:</label>
-                    <input type="number" id="people" name="people" required><br><br>
-                    <input type="submit" value="Reserveer">
-                </form>
-                <ul class="actions">
-                    <li><a href="index.html" class="button big">Home</a></li>
-                </ul>
-            </section>
-
+            <form method="post">
+                {% csrf_token %}
+                <div>
+                    <h6 for="{{ form.voornaam.id_for_label }}">Voornaam</h6>
+                    {{ form.voornaam }}
+                </div>
+                <br>
+                <div>
+                    <h6 for="{{ form.achternaam.id_for_label }}">Achternaam</h6>
+                    {{ form.achternaam }}
+                </div>
+                </br>
+                
+                <div>
+                    <h6 for="{{ form.email.id_for_label }}">Email</h6>
+                    {{ form.email }}
+                </div>
+            
+                <br>
+                <div>
+                    <h6 for="{{ form.res_date.id_for_label }}">Datum</h6>
+                    {{ form.res_date }}
+                </div>
+                <div>
+                    <h6 for="{{ form.res_time.id_for_label }}">Tijdstip</h6>
+                    {{ form.res_time }}
+                </div>
+                </br>
+                    <h6 for="{{ form.aantal_pers.id_for_label }}">Aantal personen:</h6>
+                    {{ form.aantal_pers }}
+                    
+                
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>   
             <!-- Footer -->
             <footer id="footer">
                 <ul class="icons">

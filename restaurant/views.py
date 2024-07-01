@@ -1,12 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.shortcuts import render
-from django.http import HttpResponse
 from .models import review
 from django.template import loader
 from django.utils import timezone
-
-
+from django.shortcuts import render, redirect
+from .forms import ReservatieForm
 def index(request):
     return render(request, 'index.html')
 
@@ -31,8 +29,18 @@ def openingsuren(request):
     return render(request, 'openingsuren.html')
 
 def reservatie(request):
-    template = loader.get_template("reservatie.html")
-    return HttpResponse(template.render)
+    if request.method == 'POST':
+        form = ReservatieForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.pub_date = timezone.now()  # Assuming you want to set the current date and time
+            review.save()
+            return redirect('index.html')  # index.html
+    else:
+        form = ReservatieForm()
+
+        return render(request, 'reservatie.html', {'form': form})
+
 def volwassenmenu(request):
     return render(request, 'volwassenmenu.html')
 
