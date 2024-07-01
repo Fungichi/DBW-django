@@ -1,4 +1,4 @@
 # The Blue Worm
-A website made using the Django framework.
+This website is made using the Django framework.
 A mind-boggling restaurant with a variety of strange delicacies.
-A project made for the arcade event of the hackclub.
+This project is made for the arcade event from the hackclub.
