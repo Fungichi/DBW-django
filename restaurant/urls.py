@@ -12,7 +12,9 @@ urlpatterns = [
     path("menu.html", views.menu, name="menu"),
     path("openingsuren.html", views.openingsuren, name="openingsuren"),
     path("reservatie.html", views.reservatie, name="reservatie"),
-    path("about.html", views.about, name="about")
+    path("about.html", views.about, name="about"),
+    path("write_reviews.html", views.reviews_create, name="review_write"),
+    path("reviews.html", views.reviews_index, name="reviews"),
     
 
 ]

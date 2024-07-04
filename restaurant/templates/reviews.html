@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <title>De Blauwe worm</title>
+  </head>
+  <body>
+    <header>
+        <h1 class="align-center">Reviews</h1>
+    </header>
+    <main> 
+    <a  class="button" href="write_reviews.html">Write</a>
+    <br></br>
+        {% if reviews %}
+            <table>
+                
+            {% for review in reviews %}
+            <tr>
+                <td>
+                    
+                    {% for i in "x"|rjust:review.stars %}
+                        <span>&#9733;</span>
+                    {% endfor %}
+                    <span id="date">{{ review.pub_date}}</span>
+                    
+                    <h4>{{ review.text }}</h4>
+                </td>
+            </tr>
+            {% endfor %}
+            
+            </table>
+        {% else %}
+            <p>No Reviews Yet!</p>
+        {% endif %}
+
+ 
+
+    </main>
+    <footer>
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/skel.min.js' %}"></script>
+        <script src="{% static 'assets/js/util.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+    </footer>
+    
+  </body>
+</html>

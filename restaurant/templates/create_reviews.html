@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <title>SLNT</title>
+  </head>
+  <body>
+    <header>
+        <h2>Write a review</h2>
+    </header>
+    <main>   
+      <form method="post">
+        {% csrf_token %}
+        <div>
+            <h4 for="{{ form.text.id_for_label }}">Text:</h4>
+            {{ form.text }}
+        </div>
+        <div>
+            <h4 for="{{ form.stars.id_for_label }}">Stars:</h4>
+            {{ form.stars }}
+        </div>
+        <br><br>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    </main>
+    <footer>
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/skel.min.js' %}"></script>
+        <script src="{% static 'assets/js/util.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+    </footer>
+    
+  </body>
+</html>

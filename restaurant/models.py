@@ -16,7 +16,7 @@ class reservatie(models.Model):
     email = models.EmailField(max_length=254, unique=True)
     aantal_pers = models.IntegerField()
     res_date = models.DateTimeField("Reservation date")  # Use DateTimeField for date and time
-    res_time = models.TimeField()
+    res_time = models.TimeField("Reservation time")
 
     def __str__(self):
         return f"{self.voornaam} {self.achternaam}"
